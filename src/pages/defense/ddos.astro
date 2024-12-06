@@ -1,6 +1,8 @@
 ---
 import Question from '../../components/Question';
 import Layout from '../../layouts/Layout.astro';
+import Arma from '../../imgs/arma.png'
+import { Image } from 'astro:assets';
 
 const proteccionRoboContraseñas = [
   {
@@ -39,7 +41,7 @@ const proteccionRoboContraseñas = [
 				</div>
 			</div>
 			<div class="">
-				<img class="w-44" src="../imgs/arma.png" alt="">
+				<Image class="w-44" src={Arma} alt="">
 			</div>
 		</div>
 

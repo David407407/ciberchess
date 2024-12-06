@@ -1,6 +1,8 @@
 ---
 import Question from '../../components/Question';
 import Layout from '../../layouts/Layout.astro';
+import Oficial from '../../imgs/policia.png'
+import { Image } from 'astro:assets';
 
 const policiasYCiberseguridad = [
   {
@@ -40,7 +42,7 @@ const policiasYCiberseguridad = [
 				</div>
 			</div>
 			<div class="">
-				<img class="w-44" src="../imgs/policia.png" alt="">
+				<Image class="w-44" src={Oficial} alt="">
 			</div>
 		</div>
 

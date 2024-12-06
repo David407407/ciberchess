@@ -1,6 +1,10 @@
 ---
 import Question from '../../components/Question';
 import Layout from '../../layouts/Layout.astro';
+import Angel from '../../imgs/angel.png'
+import Atenea from '../../imgs/atenea.png'
+import Pastillas from '../../imgs/pildoras-anticonceptivas.png'
+import { Image } from 'astro:assets';
 
 const ateneaQuestions = [
   {
@@ -40,9 +44,9 @@ const ateneaQuestions = [
 				</div>
 			</div>
 			<div class="grid grid-cols-2 gap-4">
-				<img class="w-44" src="../imgs/atenea.png" alt="">
-				<img class="w-44" src="../imgs/angel.png" alt="">
-				<img class="w-36 col-start-1 col-end-3 mx-auto" src="../imgs/pildoras-anticonceptivas.png" alt="">
+				<Image class="w-44" src={Atenea} alt="">
+				<Image class="w-44" src={Angel} alt="">
+				<Image class="w-36 col-start-1 col-end-3 mx-auto" src={Pastillas}alt="">
 			</div>
 		</div>
 

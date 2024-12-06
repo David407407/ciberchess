@@ -1,6 +1,8 @@
 ---
 import Question from '../../components/Question';
 import Layout from '../../layouts/Layout.astro';
+import Casco from '../../imgs/casco.png'
+import { Image } from 'astro:assets';
 
 const defensaContraVulnerabilidades = [
   {
@@ -40,7 +42,7 @@ const defensaContraVulnerabilidades = [
 				</div>
 			</div>
 			<div class="">
-				<img class="w-44" src="../imgs/casco.png" alt="">
+				<Image class="w-44" src={Casco} alt="">
 			</div>
 		</div>
 
