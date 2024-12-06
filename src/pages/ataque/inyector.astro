@@ -1,6 +1,8 @@
 ---
 import Question from '../../components/Question';
 import Layout from '../../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+import Jeringuilla from '../../imgs/jeringuilla.png'
 
 const virusInyector = [
   { question: "¿Qué es un virus inyector?", answer: "Es un malware que inserta código malicioso en archivos o procesos." },
@@ -16,17 +18,17 @@ const virusInyector = [
 
 <Layout>
 	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
-		<div class="flex justify-between items-center">
+		<div class="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center">
 			<div>
-				<h1 class="text-5xl font-bold mb-4 lucidity flex-1"> 
+				<h1 class="text-3xl lg:text-5xl font-bold mb-4 lucidity"> 
 					Inyector
 				</h1>
-				<div class="bg-slate-900 rounded-lg px-4 py-3">
+				<div class="bg-slate-900 max-w-44 mx-auto lg:mx-0 rounded-lg px-4 py-3">
 					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
 				</div>
 			</div>
 			<div>
-				<img class="w-44 mx-auto" src="../imgs/jeringuilla.png" alt="">
+				<Image class="w-36 xl:w-44" src={Jeringuilla} alt="">
 			</div>
 		</div>
 
