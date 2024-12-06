@@ -1,0 +1,55 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const ateneaQuestions = [
+  {
+    question: "¿Qué práctica previene la mayoría de los virus?",
+    answer: "No descargar archivos de fuentes no confiables."
+  },
+  {
+    question: "¿Cómo protegerte específicamente contra troyanos?",
+    answer: "Usa un antivirus que detecte programas maliciosos disfrazados."
+  },
+  {
+    question: "¿Cómo evitar el virus Expiro?",
+    answer: "Evita abrir archivos adjuntos sospechosos y analiza regularmente tu sistema."
+  },
+  {
+    question: "¿Qué precaución tomar contra virus inyectores?",
+    answer: "Mantén tu software y sistema operativo actualizados."
+  },
+  {
+    question: "¿Qué hacer si sospechas que un virus infectó tu dispositivo?",
+    answer: "Realiza un análisis completo con un antivirus confiable."
+  }
+];
+
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity"> 
+					Protección Contra Virus
+				</h1>
+				<div class="bg-slate-900 max-w-44 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div class="grid grid-cols-2 gap-4">
+				<img class="w-44" src="../imgs/atenea.png" alt="">
+				<img class="w-44" src="../imgs/angel.png" alt="">
+				<img class="w-36 col-start-1 col-end-3 mx-auto" src="../imgs/pildoras-anticonceptivas.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={ateneaQuestions} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

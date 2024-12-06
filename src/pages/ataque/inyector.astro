@@ -1,0 +1,39 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const virusInyector = [
+  { question: "¿Qué es un virus inyector?", answer: "Es un malware que inserta código malicioso en archivos o procesos." },
+  { question: "¿Cómo afecta el virus inyector al sistema?", answer: "Daña archivos y compromete la seguridad del dispositivo." },
+  { question: "¿Cómo prevenir infecciones por virus inyector?", answer: "Mantén actualizado tu antivirus y evita descargas sospechosas." },
+  { question: "¿Cómo detectas un virus inyector?", answer: "A través de análisis de seguridad o mensajes de error inusuales." },
+  { question: "¿Qué debes hacer si encuentras un virus inyector?", answer: "Usa un antivirus para eliminarlo y restaura archivos dañados." }
+];
+
+
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity flex-1"> 
+					Inyector
+				</h1>
+				<div class="bg-slate-900 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div>
+				<img class="w-44 mx-auto" src="../imgs/jeringuilla.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={virusInyector} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

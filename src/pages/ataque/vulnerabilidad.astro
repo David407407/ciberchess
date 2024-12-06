@@ -1,0 +1,38 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const vulnerabilidadesPaginasAntiguas = [
+  { question: "¿Qué son las vulnerabilidades en páginas antiguas?", answer: "Son fallos de seguridad en sitios sin actualizaciones recientes." },
+  { question: "¿Por qué son peligrosas las páginas desactualizadas?", answer: "Son objetivos fáciles para ataques de hackers." },
+  { question: "¿Cómo proteger una página web antigua?", answer: "Actualiza su software y parches de seguridad." },
+  { question: "¿Qué hacer si encuentras una vulnerabilidad en tu página?", answer: "Repara el fallo y realiza pruebas de seguridad." },
+  { question: "¿Cómo evitar crear páginas vulnerables?", answer: "Usa herramientas y códigos actualizados desde el inicio." }
+];
+
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity flex-1"> 
+					vulnerabilidades
+				</h1>
+				<div class="bg-slate-900 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div>
+				<img class="w-44 mx-auto" src="../imgs/sociedad.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={vulnerabilidadesPaginasAntiguas} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

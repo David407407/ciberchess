@@ -1,0 +1,53 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const policiasYCiberseguridad = [
+  {
+    question: "¿Qué rol tienen los policías en ciberseguridad?",
+    answer: "Investigan y persiguen delitos informáticos."
+  },
+  {
+    question: "¿Qué delitos cibernéticos investigan los policías?",
+    answer: "Robo de datos, fraudes y hacking."
+  },
+  {
+    question: "¿Qué hacer si eres víctima de un delito cibernético?",
+    answer: "Denúncialo a la policía especializada en cibercrimen."
+  },
+  {
+    question: "¿Cómo colabora la policía con empresas en ciberseguridad?",
+    answer: "Ofrecen soporte en incidentes y recuperación de datos."
+  },
+  {
+    question: "¿Qué unidades policiales se especializan en ciberseguridad?",
+    answer: "Grupos como la Interpol o las unidades nacionales de delitos informáticos."
+  }
+];
+
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity"> 
+					Policias y Ciberseguridad
+				</h1>
+				<div class="bg-slate-900 max-w-44 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div class="">
+				<img class="w-44" src="../imgs/policia.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={policiasYCiberseguridad} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

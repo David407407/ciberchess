@@ -1,0 +1,53 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const defensaContraVulnerabilidades = [
+  {
+    question: "¿Qué es una vulnerabilidad en ciberseguridad?",
+    answer: "Es un fallo o debilidad en un sistema que puede ser explotado."
+  },
+  {
+    question: "¿Cómo identificar vulnerabilidades en un sistema?",
+    answer: "Mediante auditorías y pruebas de penetración."
+  },
+  {
+    question: "¿Qué herramienta puedes usar para protegerte contra vulnerabilidades?",
+    answer: "Firewalls y software de detección de intrusos."
+  },
+  {
+    question: "¿Por qué es importante aplicar parches de seguridad?",
+    answer: "Corrigen fallos y evitan que sean explotados."
+  },
+  {
+    question: "¿Qué práctica ayuda a reducir vulnerabilidades?",
+    answer: "Mantener todos los sistemas actualizados."
+  }
+];
+
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity"> 
+					Vulnerabilidades
+				</h1>
+				<div class="bg-slate-900 max-w-44 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div class="">
+				<img class="w-44" src="../imgs/casco.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={defensaContraVulnerabilidades} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

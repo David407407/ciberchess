@@ -1,0 +1,37 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const sitiosWebPeligrosos = [
+  { question: "¿Qué es un sitio web peligroso?", answer: "Es un sitio que contiene malware o phishing." },
+  { question: "¿Cómo identificar un sitio web inseguro?", answer: "Faltan certificados HTTPS o tiene errores ortográficos." },
+  { question: "¿Qué hacer si visitas un sitio web peligroso?", answer: "Cierra la página y ejecuta un análisis antivirus." },
+  { question: "¿Qué riesgos hay al usar sitios peligrosos?", answer: "Robo de datos o instalación de malware." },
+  { question: "¿Cómo evitar sitios web peligrosos?", answer: "Usa un navegador seguro y herramientas de protección." }
+];
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity flex-1"> 
+					Sitios Web Falsos
+				</h1>
+				<div class="bg-slate-900 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div>
+				<img class="w-44 mx-auto" src="../imgs/web-browser.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={sitiosWebPeligrosos} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

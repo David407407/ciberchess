@@ -1,0 +1,37 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const emailsFalsos = [
+  { question: "¿Qué son los emails falsos?", answer: "Son correos diseñados para engañar y robar datos." },
+  { question: "¿Cómo identificar un email falso?", answer: "Revisa el remitente, errores ortográficos y enlaces sospechosos." },
+  { question: "¿Qué hacer si recibes un email falso?", answer: "No lo abras, márcalo como spam y elimínalo." },
+  { question: "¿Qué riesgos tienen los emails falsos?", answer: "Pueden instalar malware o robar credenciales." },
+  { question: "¿Cómo evitar caer en un email falso?", answer: "No compartas datos personales ni hagas clic en enlaces dudosos." }
+];
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity flex-1"> 
+					Email Falso
+				</h1>
+				<div class="bg-slate-900 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div>
+				<img class="w-44 mx-auto" src="../imgs/noticias-falsas.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={emailsFalsos} />
+	</main>
+</Layout>
+
+<style>
+
+</style>

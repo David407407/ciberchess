@@ -1,0 +1,37 @@
+---
+import Question from '../../components/Question';
+import Layout from '../../layouts/Layout.astro';
+
+const virusTroyano = [
+  { question: "¿Qué es un virus troyano?", answer: "Es un malware que se disfraza de software legítimo para engañar al usuario." },
+  { question: "¿Cómo se propaga un troyano?", answer: "A través de descargas, correos o sitios web maliciosos." },
+  { question: "¿Qué hace un troyano en un dispositivo?", answer: "Roba datos, instala malware o controla el dispositivo." },
+  { question: "¿Cómo puedes prevenir infecciones de troyanos?", answer: "Evita descargas de fuentes no confiables y usa antivirus." },
+  { question: "¿Qué hacer si detectas un troyano?", answer: "Ejecuta un análisis completo con un antivirus actualizado." }
+];
+
+---
+
+<Layout>
+	<main class="w-3/5 rounded-lg mx-auto bg-gray-700 py-10 px-16 flex flex-col gap-5">
+		<div class="flex justify-between items-center">
+			<div>
+				<h1 class="text-5xl font-bold mb-4 lucidity flex-1"> 
+					Troyano
+				</h1>
+				<div class="bg-slate-900 rounded-lg px-4 py-3">
+					<h2 class="text-2xl faculty font-semibold text-center">Pregunta</h2>
+				</div>
+			</div>
+			<div>
+				<img class="w-44 mx-auto" src="../imgs/caballo-de-troya.png" alt="">
+			</div>
+		</div>
+
+		<Question client:only questions={virusTroyano} />
+	</main>
+</Layout>
+
+<style>
+
+</style>
